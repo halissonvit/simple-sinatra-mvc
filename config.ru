@@ -4,7 +4,6 @@ require 'bundler'
 $env = ENV['RACK_ENV'] ||= 'development'
 Bundler.require :default, $env.to_sym
 
-require 'sinatra/base'
 require './main'
 
 map '/assets' do

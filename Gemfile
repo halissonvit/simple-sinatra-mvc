@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rake', '~> 0.9.2.2'
-gem 'sinatra', '~> 1.3.3', require: "sinatra/base"
+gem 'sinatra', '~> 1.4', git: "git://github.com/sinatra/sinatra.git", require: "sinatra/base"
 gem 'sprockets', '~> 2.6.0', require: "sprockets"
 gem 'eco'
 gem 'coffee-script'
