@@ -1,4 +1,4 @@
-Simple Sinatra MVC Template
+Simple Sinatra MVC Template [![Build Status](https://secure.travis-ci.org/bridgeutopia/simple-sinatra-mvc.png)](http://travis-ci.org/bridgeutopia/simple-sinatra-mvc)
 ============================
 
 What's included
@@ -24,16 +24,16 @@ Start the app
 $ rackup
 ```
 
-Unit and acceptance tests 
+Unit and acceptance tests
 -----------------------------
-Ruby 1.9 includes minitest so it just makes test to use minitest instead of any other framework. 
-It works and it is simple. Use:  
+Ruby 1.9 includes minitest so it just makes test to use minitest instead of any other framework.
+It works and it is simple. Use:
 
 ``` bash
 $ rake test
 ```
 
-For acceptance tests, some example is also provided. Use: 
+For acceptance tests, some example is also provided. Use:
 
 cucumber or rake features should work
 
@@ -41,15 +41,15 @@ Configuration
 -----------------------------
 
 ``` bash
-$ mv config/database.yml.example config/database.yml 
+$ mv config/database.yml.example config/database.yml
 ```
 
 Update database.yml
 
 
-By default, we use PostgreSQL. 
+By default, we use PostgreSQL.
 
-You may have to update config.ru as needed. 
+You may have to update config.ru as needed.
 
 The Rakefile may require some updates for sprockets. As you add more assets, you would need to precompile those for production.
 
@@ -61,37 +61,29 @@ Rake Tasks
 $ rake -T
 ```
 
-rake assets:compile       # Pre-compile assets
-
 rake db:create            # create the database
-
 rake db:create_migration  # create an ActiveRecord migration in ./db/migrate
-
 rake db:migrate           # migrate your database
-
 rake features             # Run Cucumber features
 
-rake test                 # Run tests   
-
-
-To create a database for a specific environment, do: 
+To create a database for a specific environment, do:
 
 ``` bash
-$ rake db:create RACK_ENV=production 
+$ rake db:create RACK_ENV=production
 ```
 
 The default environment is "development"
 
-To create a migration file called "create_pages", do: 
+To create a migration file called "create_pages", do:
 
 ``` bash
 $ rake db:create_migration NAME=create_pages
 ```
 
-To do migration: 
+To do migration:
 
 ``` bash
-$ rake db:migrate RACK_ENV=production 
+$ rake db:migrate RACK_ENV=production
 ```
 
 The default is development so this should just work:
@@ -100,8 +92,7 @@ The default is development so this should just work:
 $ rake db:migrate
 ```
 
-TO DO 
+TO DO
 -----------------------------
 1. Write more tasks for active record
-
-2. Add more helpers 
+2. Add more helpers

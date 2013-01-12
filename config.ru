@@ -1,9 +1,4 @@
-require 'rubygems'
-require 'bundler'
-
-$env = ENV['RACK_ENV'] ||= 'development'
-Bundler.require :default, $env.to_sym
-
+require './dependencies'
 require './main'
 
 map '/assets' do

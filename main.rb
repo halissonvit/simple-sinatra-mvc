@@ -1,3 +1,5 @@
+require './dependencies'
+
 class Main < Sinatra::Base
 
   YAML::load(File.open('config/database.yml'))[$env].symbolize_keys.each do |key, value|
@@ -15,7 +17,7 @@ class Main < Sinatra::Base
   end
 
   (Dir["./app/helpers/*.rb"].sort + Dir["./app/lib/*.rb"].sort + Dir["./app/controllers/*/*.rb"].sort).each do |file|
-    load file
+    require file
   end
 
   register Sinatra::Partial
