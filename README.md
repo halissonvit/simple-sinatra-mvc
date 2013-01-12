@@ -1,4 +1,4 @@
-Simple Sinatra MVC Template [![Build Status](https://secure.travis-ci.org/bridgeutopia/simple-sinatra-mvc.png)](http://travis-ci.org/bridgeutopia/simple-sinatra-mvc)
+Simple Sinatra MVC Template
 ============================
 
 What's included
