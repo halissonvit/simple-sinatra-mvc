@@ -94,5 +94,6 @@ $ rake db:migrate
 
 TO DO
 -----------------------------
-1. Write more tasks for active record
+1. Write more migration tasks or active record or create a gem for it
 2. Add more helpers
+3. Sprockets rake task (to be moved to a gem)
