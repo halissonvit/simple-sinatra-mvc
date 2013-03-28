@@ -1,14 +1,6 @@
 ENV['RACK_ENV'] ||= 'development'
 
-require 'bundler'
-require 'sinatra'
-require 'sprockets'
-require 'pg'
-require 'friendly_id'
-require 'active_record'
-require 'active_support'
-require 'sinatra/partial'
-require 'sinatra/flash'
+%w(sinatra sprockets pg friendly_id active_record active_support sinatra/partial sinatra/flash).each { |d| require d }
 
 $env = ENV['RACK_ENV']
 Bundler.require :default, $env.to_sym
