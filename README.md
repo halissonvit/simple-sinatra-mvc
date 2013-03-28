@@ -86,14 +86,14 @@ To do migration:
 $ rake db:migrate RACK_ENV=production
 ```
 
+To rollback:
+
+``` bash
+$ rake db:rollback RACK_ENV=production
+```
+
 The default is development so this should just work:
 
 ``` bash
 $ rake db:migrate
 ```
-
-TO DO
------------------------------
-1. Write more migration tasks or active record or create a gem for it
-2. Add more helpers
-3. Sprockets rake task (to be moved to a gem)
