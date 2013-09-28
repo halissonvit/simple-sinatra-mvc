@@ -1,16 +1,12 @@
-/*
- *= require reset
- *= require grid
- *= require_self
- */
-
-
 $blue:  #003399;
 $red: #8e0600;
 
+@import 'reset';
+@import 'grid';
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: $blue; 
+  color: $blue;
   font: 14px Arial,Helvetica,sans-serif;
   text-align:left;
 }
@@ -23,7 +19,7 @@ body {
   color: $blue;
 }
 .errors {
-  color: $red; 
+  color: $red;
 }
 
 a {

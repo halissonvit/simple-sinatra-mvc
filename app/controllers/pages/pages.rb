@@ -9,10 +9,9 @@ module Sinatra
         text = text.match(/(.*)History$/m)[1] if text['History']
 
         @text = Maruku.new(text).to_html
-        haml "pages/index".to_sym  
+        slim :"pages/index"
       end
     end
   end
   register Pages
 end
-

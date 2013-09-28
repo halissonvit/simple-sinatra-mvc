@@ -1,7 +1,7 @@
 require './dependencies'
 require './main'
 
-map '/assets' do
+map Main.assets_prefix do
   environment = Sprockets::Environment.new
   environment.append_path 'app/assets/javascripts'
   environment.append_path 'app/assets/stylesheets'

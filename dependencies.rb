@@ -1,14 +1,19 @@
 ENV['RACK_ENV'] ||= 'development'
 
 %w(
-  sinatra
-  sprockets
-  pg
-  friendly_id
-  active_record
-  active_support
-  sinatra/partial
-  sinatra/flash
+active_record
+active_support
+friendly_id
+pg
+sinatra
+sinatra/asset_pipeline
+sinatra/flash
+sinatra/partial
+sinatra/static_assets
+slim
+sprockets
+sprockets-helpers
+sprockets-sass
 ).each { |d| require d }
 
 $env = ENV['RACK_ENV']
