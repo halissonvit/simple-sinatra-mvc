@@ -8,7 +8,7 @@ module Sinatra
         text = text.match(/Welcome.*$/m)[0] if text['Welcome']
         text = text.match(/(.*)History$/m)[1] if text['History']
 
-        @text = Maruku.new(text).to_html
+        @text = Kramdown::Document.new(text).to_html
         slim :"pages/index"
       end
     end

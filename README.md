@@ -7,7 +7,7 @@ Sprockets, HAML, SASS, PostgreSQL gem (pg), coffee-script and more
 
 
 ``` bash
-$ git clone --depth 1 git://github.com/bridgeutopia/simple-sinatra-mvc.git myapp
+$ git clone --depth 1 git://github.com/katgironpe/simple-sinatra-mvc.git myapp
 $ rm -r myapp/.git && rm myapp/README.md
 ```
 
@@ -41,7 +41,7 @@ Configuration
 -----------------------------
 
 ``` bash
-$ mv config/database.yml.example config/database.yml
+$ cp config/database.yml.example config/database.yml
 ```
 
 Update database.yml

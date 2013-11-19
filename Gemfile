@@ -25,7 +25,7 @@ gem 'yui-compressor'
 gem 'uglifier'
 
 #optional: just added for README on index.
-gem "maruku"
+gem "kramdown"
 
 group :development do
   gem 'pry'
