@@ -14,8 +14,9 @@ $ rm -r myapp/.git && rm myapp/README.md
 
 Use bundler to install gems
 -----------------------------
-bundle install
-
+``` bash
+$ bundle install
+```
 
 Start the app
 -----------------------------
