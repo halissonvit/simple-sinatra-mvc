@@ -3,7 +3,6 @@ ENV['RACK_ENV'] ||= 'development'
 %w(
 active_record
 active_support
-friendly_id
 pg
 sinatra
 sinatra/asset_pipeline

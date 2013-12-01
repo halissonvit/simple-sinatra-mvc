@@ -20,11 +20,11 @@ class Main < Sinatra::Base
   configure $env.to_sym do
     enable :partial_underscores, :raise_errors, :sessions, :logging
 
-    ActiveRecord::Base.establish_connection(:adapter => settings.adapter,
-                                            :username => settings.username,
-                                            :password => settings.password,
-                                            :host => settings.host,
-                                            :database => settings.database)
+    ActiveRecord::Base.establish_connection(adapter: settings.adapter,
+                                            username: settings.username,
+                                            password: settings.password,
+                                            host: settings.host,
+                                            database: settings.database)
     sprockets.append_path File.join(root, "assets", "stylesheets")
     sprockets.append_path File.join(root, "assets", "javascripts")
     sprockets.append_path File.join(root, "assets", "images")
@@ -39,7 +39,7 @@ class Main < Sinatra::Base
   end
 
 
-  (Dir["./app/helpers/*.rb"].sort + Dir["./app/lib/*.rb"].sort + Dir["./app/controllers/*/*.rb"].sort).each do |file|
+  (Dir["./app/helpers/*.rb"].sort + Dir["./app/concerns/*.rb"].sort + Dir["./app/models/*.rb"].sort  + Dir["./app/controllers/*/*.rb"].sort).each do |file|
     require file
   end
 
