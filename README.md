@@ -1,8 +1,6 @@
-Simple Sinatra MVC Template
-============================
+# Simple Sinatra MVC Template
 
-What's included
------------------------------
+## What's included
 Sprockets, HAML, SASS, PostgreSQL gem (pg), coffee-script and more
 
 
@@ -12,21 +10,19 @@ $ rm -r myapp/.git && rm myapp/README.md
 ```
 
 
-Use bundler to install gems
------------------------------
+## Use bundler to install gems
 ``` bash
 $ bundle install
 ```
 
-Start the app
------------------------------
+## Start the app
 
 ``` bash
 $ rackup
 ```
 
-Unit and acceptance tests
------------------------------
+## Unit and acceptance tests
+
 Ruby 1.9 includes minitest so it just makes test to use minitest instead of any other framework.
 It works and it is simple. Use:
 
@@ -38,8 +34,7 @@ For acceptance tests, some example is also provided. Use:
 
 cucumber or rake features should work
 
-Configuration
------------------------------
+## Configuration
 
 ``` bash
 $ cp config/database.yml.example config/database.yml
@@ -55,16 +50,19 @@ You may have to update config.ru as needed.
 The Rakefile may require some updates for sprockets. As you add more assets, you would need to precompile those for production.
 
 
-Rake Tasks
------------------------------
+## Rake Tasks
 
 ``` bash
 $ rake -T
 ```
 
-rake db:create            # create the database
-rake db:create_migration  # create an ActiveRecord migration in ./db/migrate
-rake db:migrate           # migrate your database
+rake assets:clean         # Clean assets
+rake assets:precompile    # Precompile assets
+rake db:create_migration  # create an ActiveRecord migration
+rake db:migrate           # migrate the database (use version with VERSION=n)
+rake db:rollback          # roll back the migration (use steps with STEP=n)
+rake db:schema:dump       # dump schema into file
+rake db:schema:load       # load schema into database
 rake features             # Run Cucumber features
 
 To create a database for a specific environment, do:
@@ -97,4 +95,25 @@ The default is development so this should just work:
 
 ``` bash
 $ rake db:migrate
+```
+
+
+## Asset Pipeline
+
+Yes, it is very easy to get asset pipeline working for Sinatra. By default, we have the following supported directories:
+
+* app/assets/javascripts
+* app/assets/stylesheets
+* app/assets/images
+
+You may append more paths as needed.
+
+```ruby
+sprockets.append_path File.join(root, 'app', 'assets', 'fonts')
+```
+
+To precompile assets, simply use the rake task for it either on your deployment file or locally:
+
+```bash
+rake assets:precompile
 ```
