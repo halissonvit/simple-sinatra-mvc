@@ -25,9 +25,9 @@ class Main < Sinatra::Base
                                             password: settings.password,
                                             host: settings.host,
                                             database: settings.database)
-    sprockets.append_path File.join(root, "assets", "stylesheets")
-    sprockets.append_path File.join(root, "assets", "javascripts")
-    sprockets.append_path File.join(root, "assets", "images")
+    sprockets.append_path 'assets/stylesheets'
+    sprockets.append_path 'assets/javascripts'
+    sprockets.append_path 'assets/images'
 
     Sprockets::Helpers.configure do |config|
       config.environment = sprockets
