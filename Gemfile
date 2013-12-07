@@ -21,7 +21,6 @@ gem 'sprockets-helpers', '>= 1.0.1'
 gem 'sprockets-sass', '>= 1.0.1'
 gem 'thin'
 gem 'yui-compressor'
-gem 'uglifier'
 
 #optional: just added for README on index.
 gem "kramdown"

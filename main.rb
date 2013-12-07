@@ -7,9 +7,11 @@ class Main < Sinatra::Base
   set :assets_precompile, [/^([a-zA-Z0-9_-]+\/)?([a-zA-Z0-9_-]+\/)?(?!_)([a-zA-Z0-9_-]+.\w+)$/]
   set :assets_prefix, '/assets'
   set :assets_protocol, :http
-  set :assets_css_compressor, :yui
-  set :assets_js_compressor, :uglifier
+  set :assets_css_compressor, YUI::CssCompressor.new
+  set :assets_js_compressor, YUI::JavaScriptCompressor.new
   set :assets_compress, true
+
+  register Sinatra::AssetPipeline
 
   Slim::Engine.default_options[:disable_escape] = true
 
@@ -25,9 +27,9 @@ class Main < Sinatra::Base
                                             password: settings.password,
                                             host: settings.host,
                                             database: settings.database)
-    sprockets.append_path 'assets/stylesheets'
-    sprockets.append_path 'assets/javascripts'
-    sprockets.append_path 'assets/images'
+    sprockets.append_path File.join(root, 'app', 'assets', 'stylesheets')
+    sprockets.append_path File.join(root, 'app', 'assets', 'javascripts')
+    sprockets.append_path File.join(root, 'app', 'assets', 'images')
 
     Sprockets::Helpers.configure do |config|
       config.environment = sprockets
