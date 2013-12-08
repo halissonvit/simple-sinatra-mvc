@@ -115,5 +115,7 @@ sprockets.append_path File.join(root, 'app', 'assets', 'fonts')
 To precompile assets, simply use the rake task for it either on your deployment file or locally:
 
 ```bash
-rake assets:precompile
+rake assets:precompile RACK_ENV=production
 ```
+
+You have to use the asset helpers provided by `sprocket-helpers` gem.
