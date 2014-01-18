@@ -32,7 +32,15 @@ $ rake test
 
 For acceptance tests, some example is also provided. Use:
 
-cucumber or rake features should work
+```bash
+cucumber
+```
+
+Or use the rake task (`lib/tasks/test.rake`):
+
+```
+rake features
+```
 
 ## Configuration
 
