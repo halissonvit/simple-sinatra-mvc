@@ -162,7 +162,5 @@ DEPENDENCIES
   sinatra-partial
   sinatra-static-assets
   slim
-  sprockets-helpers (>= 1.0.1)
-  sprockets-sass (>= 1.0.1)
   thin
   yui-compressor

@@ -17,8 +17,6 @@ gem 'sinatra-asset-pipeline'
 gem 'sinatra-flash'
 gem 'sinatra-partial'
 gem 'sinatra-static-assets'
-gem 'sprockets-helpers', '>= 1.0.1'
-gem 'sprockets-sass', '>= 1.0.1'
 gem 'thin'
 gem 'yui-compressor'
 

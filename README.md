@@ -53,10 +53,19 @@ Update database.yml
 
 By default, we use PostgreSQL.
 
-You may have to update config.ru as needed.
+To install PostgreSQL on a Mac, you might need homebrew.
 
-The Rakefile may require some updates for sprockets. As you add more assets, you would need to precompile those for production.
+```bash
+$ brew install postgresql
+```
 
+Creating a database should be as simple as:
+
+```bash
+$ createdb database_name
+```
+
+You may have to update `config.ru` and files on config directory as needed.
 
 ## Rake Tasks
 
@@ -105,6 +114,11 @@ The default is development so this should just work:
 $ rake db:migrate
 ```
 
+To start the application, use `shotgun`:
+
+```bash
+$ bundle exec shotgun config.ru
+```
 
 ## Asset Pipeline
 
