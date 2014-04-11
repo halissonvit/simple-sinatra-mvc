@@ -5,7 +5,7 @@ class Main < Sinatra::Base
   set :sprockets, Sprockets::Environment.new(root)
   set :digest_assets, false
   set :assets_precompile, [/^([a-zA-Z0-9_-]+\/)?([a-zA-Z0-9_-]+\/)?(?!_)([a-zA-Z0-9_-]+.\w+)$/]
-  set :assets_prefix, '/assets'
+  set :assets_prefix, %w{assets} 
   set :assets_protocol, :http
   set :assets_css_compressor, YUI::CssCompressor.new
   set :assets_js_compressor, YUI::JavaScriptCompressor.new

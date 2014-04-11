@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby "2.1.0"
+ruby "2.1.1"
 
 gem 'activerecord'
 gem 'activesupport'
@@ -17,6 +17,7 @@ gem 'sinatra-asset-pipeline'
 gem 'sinatra-flash'
 gem 'sinatra-partial'
 gem 'sinatra-static-assets'
+gem 'sprockets-helpers', github: 'petebrowne/sprockets-helpers'
 gem 'thin'
 gem 'yui-compressor'
 
