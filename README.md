@@ -128,10 +128,10 @@ Yes, it is very easy to get asset pipeline working for Sinatra. By default, we h
 * app/assets/stylesheets
 * app/assets/images
 
-You may append more paths as needed.
+You may append more paths as needed by adding directory name to the `assets_paths` array.
 
 ```ruby
-sprockets.append_path File.join(root, 'app', 'assets', 'fonts')
+set :assets_paths, %w{fonts images javascripts stylesheets}
 ```
 
 To precompile assets, simply use the rake task for it either on your deployment file or locally:
