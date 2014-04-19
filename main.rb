@@ -1,16 +1,20 @@
 require './dependencies'
+(Dir["./lib/*.rb"].sort).each do |file|
+  load file
+end
 
 class Main < Sinatra::Base
   set :root, File.dirname(__FILE__)
   set :sprockets, Sprockets::Environment.new(root)
+  sprockets.cache = Sprockets::Cache::MemcacheStore.new
   set :digest_assets, false
   set :assets_precompile, [/^([a-zA-Z0-9_-]+\/)?([a-zA-Z0-9_-]+\/)?(?!_)([a-zA-Z0-9_-]+.\w+)$/]
   set :assets_prefix, %w{assets} 
   set :assets_protocol, :http
+  set :assets_paths, %w{fonts images javascripts stylesheets}
   set :assets_css_compressor, YUI::CssCompressor.new
   set :assets_js_compressor, YUI::JavaScriptCompressor.new
-  set :assets_compress, true
-  set :assets_paths, %w{fonts images javascripts stylesheets}
+  set :assets_compress, $env == 'development' ? false : true
 
   register Sinatra::AssetPipeline
 
@@ -28,9 +32,6 @@ class Main < Sinatra::Base
                                             password: settings.password,
                                             host: settings.host,
                                             database: settings.database)
-    sprockets.append_path File.join(root, 'app', 'assets', 'stylesheets')
-    sprockets.append_path File.join(root, 'app', 'assets', 'javascripts')
-    sprockets.append_path File.join(root, 'app', 'assets', 'images')
 
     Sprockets::Helpers.configure do |config|
       config.environment = sprockets

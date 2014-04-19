@@ -141,3 +141,16 @@ rake assets:precompile RACK_ENV=production
 ```
 
 You have to use the asset helpers provided by `sprocket-helpers` gem.
+
+
+## Caching Assets
+
+We use memcached to speed up loading of assets and storing them whether they're compressed or not.
+It is highly recommended to enable this by default in production.
+
+
+To install memcached:
+
+```bash
+brew install memcached
+```
