@@ -33,6 +33,10 @@ class Main < Sinatra::Base
                                             host: settings.host,
                                             database: settings.database)
 
+    assets_paths.each do |path|
+      sprockets.append_path File.join(root, 'app', 'assets', path)
+    end
+
     Sprockets::Helpers.configure do |config|
       config.environment = sprockets
       config.prefix = assets_prefix
