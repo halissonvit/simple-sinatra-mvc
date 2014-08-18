@@ -1,3 +1,5 @@
+[![Dependency Status](https://gemnasium.com/katgironpe/simple-sinatra-mvc.svg)](https://gemnasium.com/katgironpe/simple-sinatra-mvc)
+
 # Simple Sinatra MVC Template
 
 ## What's included
