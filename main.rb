@@ -20,7 +20,7 @@ class Main < Sinatra::Base
 
   Slim::Engine.default_options[:disable_escape] = true
 
-  YAML::load(File.open('config/database.yml'))[$env].symbolize_keys.each do |key, value|
+  YAML::load(File.open('config/database.yml'))[$env].each do |key, value|
     set key, value
   end
 

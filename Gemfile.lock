@@ -170,4 +170,4 @@ DEPENDENCIES
   slim (~> 2.0)
   sprockets-helpers!
   thin
-  yui-compressor
+  yui-compressor (~> 0.10)

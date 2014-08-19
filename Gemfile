@@ -18,7 +18,7 @@ gem 'sinatra-partial', '~> 0.4'
 gem 'sinatra-static-assets', '~> 1.0'
 gem 'slim', '~> 2.0'
 gem 'sprockets-helpers', github: 'petebrowne/sprockets-helpers'
-gem 'yui-compressor'
+gem 'yui-compressor', '~> 0.10'
 
 #optional: just added for README on index.
 gem "kramdown"

@@ -6,6 +6,7 @@ require 'bundler'
 %w(
 active_record
 active_support
+kramdown
 pg
 sinatra
 sinatra/asset_pipeline
@@ -16,6 +17,7 @@ slim
 sprockets
 sprockets-helpers
 sprockets-sass
+yui/compressor
 ).each { |d| require d }
 
 $env = ENV['RACK_ENV']
