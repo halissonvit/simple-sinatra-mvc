@@ -92,7 +92,7 @@ GEM
     rspec-mocks (3.0.4)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.4)
-    sass (3.3.14)
+    sass (3.4.0)
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.4.5)
@@ -145,29 +145,29 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord
-  activesupport
+  activerecord (~> 4.0)
+  activesupport (~> 4.0)
   capybara
-  coffee-script
+  coffee-script (~> 2.0)
   cucumber
-  dalli
-  eco
+  dalli (~> 2.0)
+  eco (~> 1.0)
   kramdown
-  memcachier
-  pg
-  pony
+  memcachier (~> 0.0.2)
+  pg (~> 0.10)
+  pony (~> 1.0)
   pry
-  rake
-  rspec
-  sass
+  rake (~> 10.3)
+  rspec (~> 3.0)
+  sass (~> 3.0)
   shotgun
-  sinatra
-  sinatra-activerecord
-  sinatra-asset-pipeline
-  sinatra-flash
-  sinatra-partial
-  sinatra-static-assets
-  slim
+  sinatra (~> 1.4)
+  sinatra-activerecord (~> 2.0)
+  sinatra-asset-pipeline (~> 0.4)
+  sinatra-flash (~> 0.3)
+  sinatra-partial (~> 0.4)
+  sinatra-static-assets (~> 1.0)
+  slim (~> 2.0)
   sprockets-helpers!
   thin
   yui-compressor
