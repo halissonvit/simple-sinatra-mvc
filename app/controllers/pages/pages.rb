@@ -9,7 +9,7 @@ module Sinatra
         text = text.match(/(.*)History$/m)[1] if text['History']
 
         @text = Kramdown::Document.new(text).to_html
-        slim :"pages/index"
+        slim :'pages/index'
       end
     end
   end

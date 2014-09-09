@@ -6,6 +6,7 @@ gem 'coffee-script', '~> 2.0'
 gem 'dalli', '~> 2.0'
 gem 'eco', '~> 1.0'
 gem 'memcachier', '~> 0.0.2'
+gem 'padrino-helpers'
 gem 'pg', '~> 0.10'
 gem 'pony', '~> 1.0'
 gem 'rake', '~> 10.3'
@@ -14,7 +15,6 @@ gem 'sinatra', '~> 1.4'
 gem 'sinatra-activerecord', '~> 2.0'
 gem 'sinatra-asset-pipeline', '~> 0.4'
 gem 'sinatra-flash', '~> 0.3'
-gem 'sinatra-partial', '~> 0.4'
 gem 'sinatra-static-assets', '~> 1.0'
 gem 'slim', '~> 2.0'
 gem 'sprockets-helpers', github: 'petebrowne/sprockets-helpers'
@@ -24,8 +24,8 @@ gem 'yui-compressor', '~> 0.10'
 gem "kramdown"
 
 group :development do
+  gem 'guard-rubocop'
   gem 'thin'
-  gem 'pry'
   gem 'shotgun'
 end
 

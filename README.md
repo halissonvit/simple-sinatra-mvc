@@ -23,6 +23,12 @@ $ bundle install
 $ rackup
 ```
 
+or 
+
+``` bash
+$ shotgun config.ru
+```
+
 ## Unit and acceptance tests
 
 Ruby 1.9 includes minitest so it just makes test to use minitest instead of any other framework.

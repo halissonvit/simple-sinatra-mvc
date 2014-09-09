@@ -1,5 +1,5 @@
 require './dependencies'
-(Dir["./lib/*.rb"].sort).each do |file|
+(Dir['./lib/*.rb'].sort).each do |file|
   load file
 end
 
@@ -9,9 +9,9 @@ class Main < Sinatra::Base
   sprockets.cache = Sprockets::Cache::MemcacheStore.new
   set :digest_assets, false
   set :assets_precompile, [/^([a-zA-Z0-9_-]+\/)?([a-zA-Z0-9_-]+\/)?(?!_)([a-zA-Z0-9_-]+.\w+)$/]
-  set :assets_prefix, %w{assets} 
+  set :assets_prefix, %w(assets)
   set :assets_protocol, :http
-  set :assets_paths, %w{fonts images javascripts stylesheets}
+  set :assets_paths, %w(fonts images javascripts stylesheets)
   set :assets_css_compressor, YUI::CssCompressor.new
   set :assets_js_compressor, YUI::JavaScriptCompressor.new
   set :assets_compress, $env == 'development' ? false : true
@@ -25,7 +25,7 @@ class Main < Sinatra::Base
   end
 
   configure $env.to_sym do
-    enable :partial_underscores, :raise_errors, :sessions, :logging
+    enable :raise_errors, :sessions, :logging
 
     ActiveRecord::Base.establish_connection(adapter: settings.adapter,
                                             username: settings.username,
@@ -47,11 +47,9 @@ class Main < Sinatra::Base
   end
 
 
-  (Dir["./app/helpers/*.rb"].sort + Dir["./app/concerns/*.rb"].sort + Dir["./app/models/*.rb"].sort  + Dir["./app/controllers/*/*.rb"].sort).each do |file|
+  (Dir['./app/helpers/*.rb'].sort + Dir['./app/concerns/*.rb'].sort + Dir['./app/models/*.rb'].sort  + Dir['./app/controllers/*/*.rb'].sort).each do |file|
     require file
   end
 
-  register Sinatra::Partial
   register Sinatra::Pages
-
 end
