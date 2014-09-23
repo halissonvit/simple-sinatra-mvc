@@ -51,5 +51,4 @@ class Main < Sinatra::Base
     require file
   end
 
-  register Sinatra::Pages
 end

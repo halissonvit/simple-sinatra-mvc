@@ -48,11 +48,6 @@ GEM
     daemons (1.1.9)
     dalli (2.7.2)
     diff-lcs (1.2.5)
-    eco (1.0.0)
-      coffee-script
-      eco-source
-      execjs
-    eco-source (1.1.0.rc.1)
     eventmachine (1.0.3)
     execjs (2.2.1)
     ffi (1.9.3)
@@ -195,7 +190,6 @@ DEPENDENCIES
   coffee-script (~> 2.0)
   cucumber
   dalli (~> 2.0)
-  eco (~> 1.0)
   guard-rubocop
   kramdown
   memcachier (~> 0.0.2)
