@@ -3,7 +3,14 @@
 # Simple Sinatra MVC Template
 
 ## What's included
-Sprockets, HAML, SASS, PostgreSQL gem (pg), coffee-script and more
+* Sprockets
+* HAML
+* SASS
+* PostgreSQL gem (pg)
+* CoffeeScript (coffee-script)
+* Pony
+* Rubocop
+* A lot more
 
 
 ``` bash
@@ -23,7 +30,7 @@ $ bundle install
 $ rackup
 ```
 
-or 
+or
 
 ``` bash
 $ shotgun config.ru
