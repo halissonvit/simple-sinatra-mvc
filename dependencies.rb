@@ -7,6 +7,7 @@ require 'bundler'
   active_record
   active_support
   kramdown
+  newrelic_rpm
   padrino-helpers
   pg
   sinatra

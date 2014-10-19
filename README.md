@@ -169,3 +169,9 @@ To install memcached:
 ```bash
 brew install memcached
 ```
+
+## Performance Monitoring
+
+### Newrelic RPM
+
+I found a need to add this all the time. You will just need to download the `newrelic.yml` file.
