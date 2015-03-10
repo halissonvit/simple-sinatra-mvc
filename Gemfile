@@ -27,6 +27,7 @@ group :development do
   gem 'guard-rubocop'
   gem 'thin'
   gem 'shotgun'
+  gem 'ruby-debug-ide'
 end
 
 group :test do
