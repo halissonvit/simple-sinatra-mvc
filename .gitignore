@@ -4,3 +4,4 @@ public/assets
 log
 config/database.yml
 .bundle
+.idea/
