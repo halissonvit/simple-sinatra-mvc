@@ -18,9 +18,10 @@ class Main < Sinatra::Base
 
   register Sinatra::AssetPipeline
 
-  Slim::Engine.default_options[:disable_escape] = true
+  # Slim::Engine.default_options[:disable_escape] = true
 
   YAML::load(File.open('config/database.yml'))[$env].each do |key, value|
+    p("#{key}: #{value}")
     set key, value
   end
 
@@ -47,7 +48,7 @@ class Main < Sinatra::Base
   end
 
 
-  (Dir['./app/helpers/*.rb'].sort + Dir['./app/concerns/*.rb'].sort + Dir['./app/models/*.rb'].sort  + Dir['./app/controllers/*/*.rb'].sort).each do |file|
+  (Dir['./app/helpers/*.rb'].sort + Dir['./app/concerns/*.rb'].sort + Dir['./app/models/*.rb'].sort + Dir['./app/controllers/*/*.rb'].sort).each do |file|
     require file
   end
 
