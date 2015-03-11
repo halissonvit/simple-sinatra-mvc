@@ -4,7 +4,5 @@ require './dependencies'
 
 Dir['./lib/tasks/*.rake'].each { |f| load f }
 
+task :test => [:features, :spec]
 task default: :test
-task :test do
-  exec 'rake features'
-end
