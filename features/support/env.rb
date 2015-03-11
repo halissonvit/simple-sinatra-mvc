@@ -7,7 +7,7 @@ require 'capybara'
 require 'capybara/cucumber'
 require 'rspec'
 
-Capybara.app = Sinatra::Application
+Capybara.app = Main
 
 class MyWorld
   include Capybara::DSL
@@ -15,7 +15,7 @@ class MyWorld
   include RSpec::Matchers
 
   def app
-    Sinatra::Application
+    Capybara.app
   end
 end
 

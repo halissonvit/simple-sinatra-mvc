@@ -18,13 +18,14 @@ class Main < Sinatra::Base
 
   register Sinatra::AssetPipeline
 
-  # Slim::Engine.default_options[:disable_escape] = true
+  Slim::Engine.options[:disable_escape] = true
 
   YAML::load(File.open('config/database.yml'))[$env].each do |key, value|
     set key, value
   end
 
   configure $env.to_sym do
+    set :views, proc { File.join(root, 'app/views') }
     enable :raise_errors, :sessions, :logging
 
     ActiveRecord::Base.establish_connection(adapter: settings.adapter,

@@ -13,5 +13,6 @@ module Sinatra
       end
     end
   end
-  register Pages
+
+  Main.register Pages
 end
